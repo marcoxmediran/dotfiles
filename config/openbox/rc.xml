@@ -356,6 +356,12 @@
         <command>light -U 1</command>
       </action>
     </keybind>
+	<!-- Keybindings for bluetooth mouse -->
+	<keybind key="W-S-m">
+		<action name="Execute">
+			<command>xinput --set-prop "Mi Silent Mouse" "Coordinate Transformation Matrix" 0.5 0 0 0 0.5 0 0 0 1</command>
+		</action>
+	</keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

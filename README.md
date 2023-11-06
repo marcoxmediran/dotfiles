@@ -1,2 +1,14 @@
-# openbox-dotfiles
-My current openboxwm setup
+# Details
+- **OS:** Fedora
+- **Window Manager:** Openbox
+- **Bar:** Polybar
+- **Menu:** Rofi
+- **Compositor:** Picom
+- **Theme:** Gruvbox Material
+- **Fonts:**
+    - **UI:** Inter
+    - **Icons:** Font Awesome 6 Free
+    - **Terminal:** JetBrainsMono Nerd Fonts
+
+##
+![1](pictures/screenshot.png)

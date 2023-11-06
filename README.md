@@ -11,4 +11,5 @@
     - **Terminal:** JetBrainsMono Nerd Fonts
 
 ##
-![1](pictures/screenshot.png)
+![0](pictures/screenshot0.png)
+![1](pictures/screenshot1.png)

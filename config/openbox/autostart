@@ -1,4 +1,4 @@
 nitrogen --restore &
 polybar &
 picom &
-xinput --set-prop "Mi Silent Mouse" "Coordinate Transformation Matrix" 0.5 0 0 0 0.5 0 0 0 1 &
+xinput --set-prop "Mi Silent Mouse" "libinput Accel Speed" -0.75

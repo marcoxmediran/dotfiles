@@ -160,7 +160,7 @@ configuration {
 window {
 	background-color: @bg;
 	border-color: @bg;
-	border-radius: 8px;
+	border-radius: 0px;
 	width: env(WIDTH, 32%);
 	children: [mainbox];
 }

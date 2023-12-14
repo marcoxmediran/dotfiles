@@ -1,5 +1,5 @@
 # Details
-- **OS:** Fedora
+- **OS:** Gentoo
 - **Window Manager:** Openbox
 - **Bar:** Polybar
 - **Menu:** Rofi

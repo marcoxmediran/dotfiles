@@ -242,6 +242,18 @@
         <to>5</to>
       </action>
     </keybind>
+	<!-- Keybindings for Quitting Openbox -->
+	<keybind key="W-S-E">
+		<action name="Execute">
+			<command>openbox --exit</command>
+		</action>
+	</keybind>
+	<!-- Keybindings for Restarting Openbox -->
+	<keybind key="W-S-R">
+		<action name="Execute">
+			<command>openbox --restart</command>
+		</action>
+	</keybind>
     <!-- Keybindings for windows -->
     <keybind key="W-S-Q">
       <action name="Close"/>
@@ -354,12 +366,6 @@
     <keybind key="W-Down">
       <action name="Execute">
         <command>light -U 1</command>
-      </action>
-    </keybind>
-    <!-- Keybindings for bluetooth mouse -->
-    <keybind key="W-S-m">
-      <action name="Execute">
-		<command>xinput --set-prop "Mi Silent Mouse" "libinput Accel Speed" -0.75</command>
       </action>
     </keybind>
   </keyboard>

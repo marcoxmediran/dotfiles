@@ -1,4 +1,3 @@
 nitrogen --restore &
 polybar &
 picom &
-xinput --set-prop "Mi Silent Mouse" "libinput Accel Speed" -0.75

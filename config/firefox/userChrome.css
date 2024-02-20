@@ -282,17 +282,66 @@
     border-left-color: #282828 !important;
 }
 
+
+
 /* Personal Customizations */
 #navigator-toolbox {
 	border-bottom: none !important;
+    position: absolute !important;
+    max-width: 250px !important;
+}
+
+#customizableui-special-spring41 {
+  max-width: 115px;
 }
 
 #tabbrowser-tabpanels {
     background-color: #282828 !important;
+    padding: 2px !important;
 }
 
 #tabbrowser-tabpanels {
 	browser[type="content"] {
 		border-radius: 10px !important;
 	}
+}
+
+#sidebar-box {
+    padding-top: 70px !important;
+    background-color: #282828 !important;
+    width: 250px !important;
+}
+
+#urlbar-background {
+    border-radius: 4px !important;
+    background-color: #282828 !important;
+}
+
+#urlbar-container {
+    width: 240px !important;
+}
+
+#urlbar {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    position: unset !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+    position: unset !important;
+}
+
+#nav-bar-customization-target {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+}
+
+#tracking-protection-icon-container, #identity-box, #page-action-buttons, #PanelUI-button {
+    display: none !important;
+}
+
+#downloads-button {
+    padding-left: 60px !important;
 }

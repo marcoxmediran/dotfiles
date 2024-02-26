@@ -1727,12 +1727,14 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0;
-  background-color: #32302f;
+  /* background-color: #32302f; */
+  background-color: #282828;
   color: #ddc7a1;
 }
 menubar:backdrop,
 .menubar:backdrop {
-  background-color: #282625;
+  /* background-color: #282625; */
+  background-color: #282828;
   color: rgba(221, 199, 161, 0.7);
 }
 .csd menubar,

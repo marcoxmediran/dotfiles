@@ -4,6 +4,7 @@ require("mason").setup {}
 require("mason-lspconfig").setup({
 	ensure_installed = {
 		"pylsp",
+		"jdtls",
 	}
 })
 
@@ -16,6 +17,9 @@ lspconfig.pylsp.setup {
 	capabilities = capabilities,
 }
 lspconfig.dartls.setup {
+	capabilities = capabilities,
+}
+lspconfig.jdtls.setup {
 	capabilities = capabilities,
 }
 require("flutter-tools").setup {

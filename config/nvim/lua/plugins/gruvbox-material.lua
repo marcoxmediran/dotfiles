@@ -1,4 +1,3 @@
 return {
 	"sainnhe/gruvbox-material",
 }
-

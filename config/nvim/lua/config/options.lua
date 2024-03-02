@@ -14,3 +14,6 @@ vim.opt.number = true
 -- Nvim-tree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- Startup Commands
+vim.cmd "Oil"

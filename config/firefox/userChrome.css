@@ -291,13 +291,9 @@
     max-width: 250px !important;
 }
 
-#customizableui-special-spring41 {
-  max-width: 115px;
-}
-
 #tabbrowser-tabpanels {
     background-color: #282828 !important;
-    padding: 2px !important;
+    padding: 4px !important;
 }
 
 #tabbrowser-tabpanels {
@@ -315,6 +311,11 @@
 #urlbar-background {
     border-radius: 4px !important;
     background-color: #282828 !important;
+}
+
+#urlbar-input-container {
+    margin-left: 6px !important;
+    width: 95% !important;
 }
 
 #urlbar-container {
@@ -338,10 +339,14 @@
     width: 100% !important;
 }
 
-#tracking-protection-icon-container, #identity-box, #page-action-buttons, #PanelUI-button {
+#tracking-protection-icon-container, #identity-box, #page-action-buttons {
     display: none !important;
 }
 
 #downloads-button {
-    padding-left: 60px !important;
+    margin-left: 22px !important;
+}
+
+#PanelUI-button {
+    margin-top: -38px !important;
 }

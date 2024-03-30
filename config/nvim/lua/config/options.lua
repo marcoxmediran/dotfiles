@@ -16,3 +16,4 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Startup Commands
 vim.cmd "Oil"
+vim.cmd "TransparentEnable"

@@ -23,6 +23,7 @@
   "oil.nvim": { "branch": "master", "commit": "132b4ea0740c417b9d717411cab4cf187e1fd095" },
   "plenary.nvim": { "branch": "master", "commit": "4f71c0c4a196ceb656c824a70792f3df3ce6bb6d" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "d90956833d7c27e73c621a61f20b29fdb7122709" },
+  "transparent.nvim": { "branch": "main", "commit": "fd35a46f4b7c1b244249266bdcb2da3814f01724" },
   "vim-yami": { "branch": "master", "commit": "15e0c45d4375438cf1fb513050570e43ae4f2aef" },
   "zenbones.nvim": { "branch": "main", "commit": "418fcb2bd45073d258a70d75a17f03e9f73a97a7" }
 }

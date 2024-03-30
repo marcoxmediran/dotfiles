@@ -1,7 +1,8 @@
 local vim = vim
 
 -- Colors
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
+vim.cmd "colorscheme wal"
 
 -- General Options
 vim.opt.tabstop = 4
@@ -16,4 +17,3 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Startup Commands
 vim.cmd "Oil"
-vim.cmd "TransparentEnable"

@@ -1,3 +1,0 @@
-return {
-    'danishprakash/vim-yami',
-}

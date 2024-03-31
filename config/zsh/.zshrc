@@ -16,9 +16,6 @@ fpath+=($HOME/.zsh/pure)
 autoload -U promptinit; promptinit
 prompt pure
 
-# Set default environment
-export XSESSION=openbox
-
 # Aliases
 alias vim="/usr/bin/nvim"
 alias emulator="nohup ~/Android/Sdk/emulator/emulator -avd Pixel_3a_API_34_extension_level_7_x86_64 &> /dev/null &"
@@ -29,6 +26,9 @@ export PATH=$PATH:~/Development/SDK/dart/bin
 
 # Add android-studio to PATH
 export PATH=$PATH:~/Development/android-studio/bin
+
+# Add .local/bin to PATH
+export PATH=$PATH:~/.local/bin
 
 # Add Games to PATH
 export PATH=$PATH:~/Games/tetrio-desktop

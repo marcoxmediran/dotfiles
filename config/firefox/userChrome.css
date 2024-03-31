@@ -273,13 +273,13 @@
 }
 
 [sidebarcommand*="tabcenter"] #sidebar-header {
-    background: #282828;
+    background: #15161f;
     border-bottom: none !important;
 }
 
 [sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
-    border-right-color: #282828 !important;
-    border-left-color: #282828 !important;
+    border-right-color: #15161f !important;
+    border-left-color: #15161f !important;
 }
 
 
@@ -292,7 +292,7 @@
 }
 
 #tabbrowser-tabpanels {
-    background-color: #282828 !important;
+    background-color: #15161f !important;
     padding: 4px !important;
 }
 
@@ -304,13 +304,13 @@
 
 #sidebar-box {
     padding-top: 70px !important;
-    background-color: #282828 !important;
+    background-color: #15161f !important;
     width: 250px !important;
 }
 
 #urlbar-background {
     border-radius: 4px !important;
-    background-color: #282828 !important;
+    background-color: #15161f !important;
 }
 
 #urlbar-input-container {

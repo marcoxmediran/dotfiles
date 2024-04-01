@@ -1,8 +1,8 @@
 local vim = vim
 
 -- Colors
-vim.opt.termguicolors = false
-vim.cmd "colorscheme wal"
+vim.opt.termguicolors = true
+vim.cmd "colorscheme gruvbox-material"
 
 -- General Options
 vim.opt.tabstop = 4

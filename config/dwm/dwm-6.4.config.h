@@ -6,13 +6,13 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10" };
-static const char norm_fg[] = "#e0e4e9";
-static const char norm_bg[] = "#15161f";
-static const char norm_border[] = "#9c9fa3";
+static const char norm_fg[] = "#d4be98";
+static const char norm_bg[] = "#282828";
+static const char norm_border[] = "#282828";
 
-static const char sel_fg[] = "#15161f";
-static const char sel_bg[] = "#A8AFB9";
-static const char sel_border[] = "#e0e4e9";
+static const char sel_fg[] = "#282828";
+static const char sel_bg[] = "#d4be98";
+static const char sel_border[] = "#d4be98";
 
 static const char *colors[][3]      = {
     /*               fg           bg         border                         */

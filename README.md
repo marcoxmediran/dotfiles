@@ -6,4 +6,4 @@
 - **Fonts:** JetBrainsMono Nerd Font
 
 ##
-![desktop screenshot]('https://ibb.co/SVw5YvH')
+![desktop screenshot]('https://i.ibb.co/bN5QwdY/2024-07-27-11-01-06.png')

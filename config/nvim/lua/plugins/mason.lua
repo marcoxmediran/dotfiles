@@ -35,14 +35,11 @@ return {
             lspconfig.lua_ls.setup({
                 capabilities = capabilities,
             })
-            lspconfig.dartls.setup({
-                capabilities = capabilities,
-            })
             lspconfig.bashls.setup({
                 capabilities = capabilities,
             })
             require("flutter-tools").setup({
-                capabilities = capabilities,
+                flutter_path = "/home/marcox/Development/SDK/flutter/bin/flutter",
             })
         end,
     },

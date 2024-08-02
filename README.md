@@ -1,8 +1,6 @@
 # Details
-- **OS:** Arch Linux
-- **Window Manager:** dwm
-- **Bar:** dwm + slstatus
-- **Compositor:** Picom
+- **OS:** Windows 11
+- **Distro:** Debian WSL2
 - **Fonts:** JetBrainsMono Nerd Font
 
 ##

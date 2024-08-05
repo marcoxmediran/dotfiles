@@ -1,5 +1,10 @@
 #SingleInstance Force
 
+; caps2esc
+$CapsLock::Send "{Esc}"
+$Esc::Send "{``}"
+$+Esc::Send "{~}"
+
 ; Media
 #=::Send "{Volume_Up}"
 #-::Send "{Volume_Down}"

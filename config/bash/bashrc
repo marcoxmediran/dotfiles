@@ -1,0 +1,45 @@
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# Vi mode
+set -o vi
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
+# Aliases
+alias ls="ls --color=auto"
+alias r="fc -s"
+alias home="cd ~"
+alias chome="cd /mnt/c/Users/Marcox"
+
+# PATH
+export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/usr/bin/flutter/bin"
+
+# Prompt
+function parse_git_dirty {
+  [[ $(git status --porcelain 2> /dev/null) ]] && echo "*"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
+}
+
+export PS1="\n\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\n\[\033[35m\]❯\[\033[00m\] "

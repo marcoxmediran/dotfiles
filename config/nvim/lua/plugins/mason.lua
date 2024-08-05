@@ -36,7 +36,7 @@ return {
                 capabilities = capabilities,
             })
             require("flutter-tools").setup({
-                flutter_path = "/home/marcox/Development/SDK/flutter/bin/flutter",
+                flutter_path = "/usr/bin/flutter/bin/flutter",
             })
         end,
     },

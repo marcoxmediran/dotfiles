@@ -49,7 +49,7 @@
     {
         "defaults": 
         {
-            "colorScheme": "Lackluster",
+            "colorScheme": "GruvboxMaterialHardDark",
             "cursorShape": "filledBox",
             "font": 
             {
@@ -172,29 +172,6 @@
             "selectionBackground": "#FFFFFF",
             "white": "#D4BE98",
             "yellow": "#D8A657"
-        },
-        {
-            "background": "#121212",
-            "black": "#000000",
-            "blue": "#7788AA",
-            "brightBlack": "#080808",
-            "brightBlue": "#555555",
-            "brightCyan": "#AAAAAA",
-            "brightGreen": "#2A2A2A",
-            "brightPurple": "#7A7A7A",
-            "brightRed": "#191919",
-            "brightWhite": "#CCCCCC",
-            "brightYellow": "#444444",
-            "cursorColor": "#DEEEED",
-            "cyan": "#DEEEED",
-            "foreground": "#DEEEED",
-            "green": "#FFAA88",
-            "name": "Lackluster",
-            "purple": "#708090",
-            "red": "#D76060",
-            "selectionBackground": "#DEEEED",
-            "white": "#DDDDDD",
-            "yellow": "#789978"
         },
         {
             "background": "#282C34",

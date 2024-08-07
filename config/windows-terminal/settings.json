@@ -58,7 +58,8 @@
                 {
                     "calt": 0
                 },
-                "size": 14.0
+                "size": 14.0,
+                "weight": "normal"
             }
         },
         "list": 
@@ -151,7 +152,7 @@
             "yellow": "#C19C00"
         },
         {
-            "background": "#1C1C1C",
+            "background": "#141617",
             "black": "#665C54",
             "blue": "#7DAEA3",
             "brightBlack": "#928374",

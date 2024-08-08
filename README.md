@@ -2,8 +2,8 @@
 - **OS:** Windows 11
 - **Terminal:** Windows Terminal
 - **WLS2 Distros:**
-    - Gentoo
-    - Debian
+  - Gentoo
+  - Debian
 
 ##
 ![desktop-screenshot](images/desktop.png)

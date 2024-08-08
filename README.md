@@ -1,4 +1,9 @@
 # Details
 - **OS:** Windows 11
-- **Distro:** Debian WSL2
-- **Fonts:** JetBrainsMono Nerd Font
+- **Terminal:** Windows Terminal
+- **WLS2 Distros:**
+    - Gentoo
+    - Debian
+
+##
+![desktop-screenshot](images/desktop-screenshot.png)

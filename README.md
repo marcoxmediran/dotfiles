@@ -6,4 +6,4 @@
     - Debian
 
 ##
-![desktop-screenshot](images/desktop-screenshot.png)
+![desktop-screenshot](images/desktop.png)

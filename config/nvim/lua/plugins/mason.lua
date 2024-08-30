@@ -35,6 +35,9 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
+      lspconfig.asm_lsp.setup({
+        capabilities = capabilities,
+      })
       require("flutter-tools").setup({
         flutter_path = "/usr/bin/flutter/bin/flutter",
       })
@@ -49,6 +52,7 @@ return {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.clang_format,
           null_ls.builtins.formatting.black,
+          null_ls.builtins.formatting.asmfmt,
         },
       }) -- Binds
       vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})

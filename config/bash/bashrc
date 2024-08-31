@@ -1,24 +1,12 @@
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]]; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
+# Put your fun stuff here.
 # Vi mode
 set -o vi
 bind -m vi-command 'Control-l: clear-screen'
@@ -27,19 +15,31 @@ bind -m vi-insert 'Control-l: clear-screen'
 # Aliases
 alias ls="ls --color=auto"
 alias r="fc -s"
-alias home="cd ~"
-alias chome="cd /mnt/c/Users/Marcox"
 
 # PATH
-export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/usr/bin/flutter/bin"
+export PATH="$PATH:/usr/bin/android-studio/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# Functions
+function asm {
+	if [[ $# != 1 ]]; then
+		echo "Usage: asm [file.asm]"
+	elif [[ $1 != *.asm ]]; then
+		echo "Error: Unsupported file extension"
+	else
+		fileName="${1:0:-4}"
+		nasm -f elf32 "$fileName".asm -o "$fileName".o
+		ld -m elf_i386 "$fileName".o -o "$fileName"
+		./"$fileName"
+	fi
+}
 
 # Prompt
 function parse_git_dirty {
-  [[ $(git status --porcelain 2> /dev/null) ]] && echo "*"
+	[[ $(git status --porcelain 2>/dev/null) ]] && echo "*"
 }
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
+	git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
 }
-
 export PS1="\n\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\n\[\033[35m\]❯\[\033[00m\] "

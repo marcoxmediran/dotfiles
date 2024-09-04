@@ -29,9 +29,9 @@ function asm {
 		echo "Error: Unsupported file extension"
 	else
 		fileName="${1:0:-4}"
-		nasm -f elf32 "$fileName".asm -o "$fileName".o
-		ld -m elf_i386 "$fileName".o -o "$fileName"
-		./"$fileName"
+		nasm -f elf32 "$fileName".asm -o /tmp/"$fileName".o
+		ld -m elf_i386 /tmp/"$fileName".o -o /tmp/"$fileName"
+		/tmp/"$fileName"
 	fi
 }
 

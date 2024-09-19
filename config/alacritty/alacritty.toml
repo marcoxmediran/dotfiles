@@ -28,8 +28,12 @@ white   = '#d4be98'
 [env]
 TERM = "xterm-256color"
 
+[shell]
+program = "C:\\Windows\\System32\\wsl.exe"
+args = ["~ -d Gentoo tmux a || tmux"]
+
 [font]
-size = 16.0
+size = 13.0
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -45,12 +49,11 @@ style = "Italic"
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
-style = "Regular"
+style = "Medium"
 
-[window.dimensions]
-columns = 128
-lines = 32
+[window]
+startup_mode = "Maximized"
 
 [window.padding]
-x = 8
-y = 8
+x = 16
+y = 16

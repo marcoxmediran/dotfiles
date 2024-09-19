@@ -11,10 +11,4 @@ return {
       vim.cmd("colorscheme gruvbox-material")
     end,
   },
-  {
-    "bluz71/vim-moonfly-colors",
-    name = "moonfly",
-    lazy = false,
-    priority = 1000,
-  },
 }

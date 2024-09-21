@@ -2,8 +2,8 @@
 # past this point for scp and rcp, and it's important to refrain from
 # outputting anything in those cases.
 if [[ $- != *i* ]]; then
-	# Shell is non-interactive.  Be done now!
-	return
+  # Shell is non-interactive.  Be done now!
+  return
 fi
 
 # Put your fun stuff here.
@@ -23,23 +23,35 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 # Functions
 function asm {
-	if [[ $# != 1 ]]; then
-		echo "Usage: asm [file.asm]"
-	elif [[ $1 != *.asm ]]; then
-		echo "Error: Unsupported file extension"
-	else
-		fileName="${1:0:-4}"
-		nasm -f elf32 "$fileName".asm -o /tmp/"$fileName".o
-		ld -m elf_i386 /tmp/"$fileName".o -o /tmp/"$fileName"
-		/tmp/"$fileName"
-	fi
+  if [[ $# != 1 ]]; then
+    echo "Usage: asm [file.asm]"
+  elif [[ $1 != *.asm ]]; then
+    echo "Error: Unsupported file extension"
+  else
+    fileName="${1:0:-4}"
+    nasm -f elf32 "$fileName".asm -o /tmp/"$fileName".o
+    ld -m elf_i386 /tmp/"$fileName".o -o /tmp/"$fileName"
+    /tmp/"$fileName"
+  fi
+}
+
+function c {
+  if [[ $# != 1 ]]; then
+    echo "Usage: c [file.c]"
+  elif [[ $1 != *.c ]]; then
+    echo "Error: Unsupported file extension"
+  else
+    fileName="${1:0:-2}"
+    gcc "$fileName".c -o /tmp/"$fileName"
+    /tmp/"$fileName"
+  fi
 }
 
 # Prompt
 function parse_git_dirty {
-	[[ $(git status --porcelain 2>/dev/null) ]] && echo "*"
+  [[ $(git status --porcelain 2>/dev/null) ]] && echo "*"
 }
 function parse_git_branch {
-	git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
+  git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
 }
 export PS1="\n\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\n\[\033[35m\]❯\[\033[00m\] "

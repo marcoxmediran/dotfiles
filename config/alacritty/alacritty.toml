@@ -26,7 +26,7 @@ cyan    = '#00ffff'
 white   = '#f8efd8'
 
 [env]
-TERM = "xter-256color"
+TERM = "xterm-256color"
 
 [shell]
 program = "C:\\Windows\\System32\\wsl.exe"

@@ -1,32 +1,32 @@
 # Default colors
 [colors.primary]
-background = '#141617'
-foreground = '#d4be98'
+background = '#053230'
+foreground = '#f8efd8'
 
 # Normal colors
 [colors.normal]
-black   = '#32302f'
-red     = '#ea6962'
-green   = '#a9b665'
-yellow  = '#d8a657'
-blue    = '#7daea3'
-magenta = '#d3869b'
-cyan    = '#89b482'
-white   = '#d4be98'
+black   = '#5b7a80'
+red     = '#d33934'
+green   = '#51a163'
+yellow  = '#969c46'
+blue    = '#3b80a1'
+magenta = '#87609c'
+cyan    = '#00ffff'
+white   = '#f8efd8'
 
 # Bright colors (same as normal colors)
 [colors.bright]
-black   = '#32302f'
-red     = '#ea6962'
-green   = '#a9b665'
-yellow  = '#d8a657'
-blue    = '#7daea3'
-magenta = '#d3869b'
-cyan    = '#89b482'
-white   = '#d4be98'
+black   = '#5b7a80'
+red     = '#d33934'
+green   = '#51a163'
+yellow  = '#969c46'
+blue    = '#3b80a1'
+magenta = '#87609c'
+cyan    = '#00ffff'
+white   = '#f8efd8'
 
 [env]
-TERM = "xterm-256color"
+TERM = "xter-256color"
 
 [shell]
 program = "C:\\Windows\\System32\\wsl.exe"

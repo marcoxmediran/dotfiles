@@ -11,7 +11,7 @@ green   = '#51a163'
 yellow  = '#969c46'
 blue    = '#3b80a1'
 magenta = '#87609c'
-cyan    = '#00ffff'
+cyan    = '#55abab'
 white   = '#f8efd8'
 
 # Bright colors (same as normal colors)
@@ -22,7 +22,7 @@ green   = '#51a163'
 yellow  = '#969c46'
 blue    = '#3b80a1'
 magenta = '#87609c'
-cyan    = '#00ffff'
+cyan    = '#55abab'
 white   = '#f8efd8'
 
 [env]
@@ -33,7 +33,7 @@ program = "C:\\Windows\\System32\\wsl.exe"
 args = ["~ -d Gentoo tmux a || tmux"]
 
 [font]
-size = 13.0
+size = 12.0
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"

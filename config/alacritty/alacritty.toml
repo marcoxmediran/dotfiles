@@ -1,29 +1,7 @@
 # Default colors
 [colors.primary]
-background = '#053230'
-foreground = '#f8efd8'
-
-# Normal colors
-[colors.normal]
-black   = '#5b7a80'
-red     = '#d33934'
-green   = '#51a163'
-yellow  = '#969c46'
-blue    = '#3b80a1'
-magenta = '#87609c'
-cyan    = '#55abab'
-white   = '#f8efd8'
-
-# Bright colors (same as normal colors)
-[colors.bright]
-black   = '#5b7a80'
-red     = '#d33934'
-green   = '#51a163'
-yellow  = '#969c46'
-blue    = '#3b80a1'
-magenta = '#87609c'
-cyan    = '#55abab'
-white   = '#f8efd8'
+background = '#eeeeee'
+foreground = '#4e4e4e'
 
 [env]
 TERM = "xterm-256color"
@@ -56,4 +34,4 @@ startup_mode = "Maximized"
 
 [window.padding]
 x = 16
-y = 16
+y = 8

@@ -17,8 +17,8 @@ alias ls="ls --color=auto"
 alias r="fc -s"
 
 # PATH
-export PATH="$PATH:/usr/bin/flutter/bin"
-export PATH="$PATH:/usr/bin/android-studio/bin"
+export PATH="$PATH":"$HOME/SDKs/flutter/bin"
+export PATH="$PATH":"$HOME/SDKs/android-studio/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 # Functions

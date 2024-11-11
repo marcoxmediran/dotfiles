@@ -41,9 +41,6 @@ return {
       lspconfig.bashls.setup({
         capabilities = capabilities,
       })
-      require("flutter-tools").setup({
-        flutter_path = "/usr/bin/flutter/bin/flutter",
-      })
     end,
   },
   {

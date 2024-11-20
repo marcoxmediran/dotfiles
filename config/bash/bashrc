@@ -17,9 +17,10 @@ alias ls="ls --color=auto"
 alias r="fc -s"
 
 # PATH
-export PATH="$PATH":"$HOME/SDKs/flutter/bin"
-export PATH="$PATH":"$HOME/SDKs/android-studio/bin"
+export PATH="$PATH":"/usr/bin/flutter/bin"
+export PATH="$PATH":"/usr/bin/android-studio/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$PATH":"/usr/bin/tetrio-desktop"
 
 # Functions
 function asm {
@@ -36,14 +37,15 @@ function asm {
 }
 
 function c {
-  if [[ $# != 1 ]]; then
-    echo "Usage: c [file.c]"
+  if [[ $# < 1 ]]; then
+    echo "Usage: c [file.c] [arguments]"
   elif [[ $1 != *.c ]]; then
     echo "Error: Unsupported file extension"
   else
     fileName="${1:0:-2}"
-    gcc "$fileName".c -o /tmp/"$fileName"
-    /tmp/"$fileName"
+    shift 1
+    clang "$fileName".c -std=c2x -Wall -lm -o /tmp/"$fileName"
+    /tmp/"$fileName" "$@"
   fi
 }
 

@@ -44,7 +44,7 @@ function c {
   else
     fileName="${1:0:-2}"
     shift 1
-    clang "$fileName".c -std=c2x -Wall -lm -o /tmp/"$fileName"
+    clang "$fileName".c -std=c2x -Werror -lm -o /tmp/"$fileName"
     /tmp/"$fileName" "$@"
   fi
 }

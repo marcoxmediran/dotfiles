@@ -30,7 +30,7 @@ background-opacity = 0.80
 background-blur-radius = 64
 
 # tmux 
-command="/usr/local/bin/tmux a || /usr/local/bin/tmux"
+initial-command="/usr/local/bin/tmux"
 
 # window
 title = "Terminal"

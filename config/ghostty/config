@@ -29,8 +29,8 @@ cursor-invert-fg-bg = true
 background-opacity = 0.80
 background-blur-radius = 64
 
-# tmux 
-initial-command="/usr/local/bin/tmux"
+cursor-style = block
+cursor-style-blink = true
 
 # window
 title = "Terminal"

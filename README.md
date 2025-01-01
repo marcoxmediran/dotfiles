@@ -3,7 +3,7 @@
     - Windows 11
     - macOS Sequoia (Opencore)
 - **Terminal:**
-    - iTerm2
+    - Ghostty
 - **Shell:**
     - Bash
 

@@ -1,0 +1,47 @@
+# font
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 18
+font-thicken = true
+
+# theme
+palette = 0=#32302f
+palette = 1=#ea6962
+palette = 2=#a9b665
+palette = 3=#d8a657
+palette = 4=#7daea3
+palette = 5=#d3869b
+palette = 6=#89b482
+palette = 7=#d4be98
+palette = 8=#32302f
+palette = 9=#ea6962
+palette = 10=#a9b665
+palette = 11=#d8a657
+palette = 12=#7daea3
+palette = 13=#d3869b
+palette = 14=#89b482
+palette = 15=#d4be98
+background = #1d2021
+foreground = #d4be98
+
+selection-invert-fg-bg = true
+cursor-invert-fg-bg = true
+
+background-opacity = 0.80
+background-blur-radius = 64
+
+# tmux 
+command="/usr/local/bin/tmux a || /usr/local/bin/tmux"
+
+# window
+title = "Terminal"
+window-padding-x = 16
+window-padding-y = 16
+window-vsync = true
+# hacky way to start as maximized by setting width and height
+# to a very large number to clamp window to screen size
+window-height = 1000
+window-width = 1000
+
+# behavior
+confirm-close-surface = false
+quit-after-last-window-closed = true

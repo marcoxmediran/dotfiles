@@ -7,6 +7,6 @@ return {
     vim.g.gruvbox_material_enable_bold = true
     vim.g.gruvbox_material_background = "hard"
     vim.g.gruvbox_material_transparent_background = 2
-    vim.cmd "colorscheme gruvbox-material"
+    vim.cmd("colorscheme gruvbox-material")
   end,
 }

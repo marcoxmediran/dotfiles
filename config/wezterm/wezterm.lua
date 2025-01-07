@@ -46,12 +46,15 @@ config.font_size = 16.0
 -- Window
 config.use_fancy_tab_bar = false
 config.window_padding = { left = 12, right = 12, top = 12, bottom = 12 }
-config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
 config.window_close_confirmation = "NeverPrompt"
-if wezterm.target_triple == "x86_64-apple-darwin" or "aarch64-apple-darwin" then
+if wezterm.target_triple == "x86_64-apple-darwin" or wezterm.target_triple == "aarch64-apple-darwin" then
 	config.window_background_opacity = 0.80
 	config.macos_window_background_blur = 64
 	config.text_background_opacity = 1.0
+	config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
+elseif wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	config.window_background_opacity = 0
+	config.win32_system_backdrop = "Mica"
 end
 
 -- Bindings

@@ -3,37 +3,39 @@ local config = wezterm.config_builder()
 local act = wezterm.action
 
 -- Colors
+local bg = "rgba(48, 10, 36, 0.80)"
 config.colors = {
-	foreground = "#D4BE98",
-	background = "#1D2021",
-	cursor_bg = "#D4BE98",
-	cursor_border = "#D4BE98",
-	cursor_fg = "#1D2021",
-	selection_bg = "#D4BE98",
-	selection_fg = "#3C3836",
+	foreground = "#eeeeec",
+	background = "#300a24",
+	cursor_bg = "#bbbbbb",
+	cursor_border = "#bbbbbb",
+	cursor_fg = "#ffffff",
+	selection_bg = "#b5d5ff",
+	selection_fg = "#000000",
 
-	ansi = { "#1d2021", "#ea6962", "#a9b665", "#d8a657", "#7daea3", "#d3869b", "#89b482", "#d4be98" },
-	brights = { "#eddeb5", "#ea6962", "#a9b665", "#d8a657", "#7daea3", "#d3869b", "#89b482", "#d4be98" },
+	ansi = { "#2e3436", "#cc0000", "#4e9a06", "#c4a000", "#3465a4", "#75507b", "#06989a", "#d3d7cf" },
+	brights = { "#555753", "#ef2929", "#8ae234", "#fce94f", "#729fcf", "#ad7fa8", "#34e2e2", "#eeeeec" },
 
 	tab_bar = {
-		background = "rgba(29, 32, 33, 0.80)",
+		background = bg,
 		active_tab = {
-			bg_color = "rgba(29, 32, 33, 0.80)",
-			fg_color = "#d4be98",
+			bg_color = bg,
+			fg_color = "#eeeeec",
 			italic = true,
 		},
 		inactive_tab = {
-			bg_color = "rgba(29, 32, 33, 0.80)",
-			fg_color = "#7c6f64",
+			bg_color = bg,
+			fg_color = "#555753",
 			italic = true,
 		},
 		new_tab = {
-			bg_color = "rgba(29, 32, 33, 0.80)",
-			fg_color = "#d4be98",
+			bg_color = bg,
+			fg_color = "#eeeeec",
 			italic = true,
 		},
 	},
 }
+config.force_reverse_video_cursor = true
 
 -- Font
 config.font = wezterm.font({

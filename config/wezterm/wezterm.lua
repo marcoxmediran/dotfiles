@@ -3,34 +3,34 @@ local config = wezterm.config_builder()
 local act = wezterm.action
 
 -- Colors
-local bg = "rgba(48, 10, 36, 0.80)"
+local bg = "rgba(29, 32, 33, 0.80)"
 config.colors = {
-	foreground = "#eeeeec",
-	background = "#300a24",
-	cursor_bg = "#bbbbbb",
-	cursor_border = "#bbbbbb",
-	cursor_fg = "#ffffff",
-	selection_bg = "#b5d5ff",
-	selection_fg = "#000000",
+	foreground = "#D4BE98",
+	background = "#1D2021",
+	cursor_bg = "#D4BE98",
+	cursor_border = "#D4BE98",
+	cursor_fg = "#1D2021",
+	selection_bg = "#D4BE98",
+	selection_fg = "#3C3836",
 
-	ansi = { "#2e3436", "#cc0000", "#4e9a06", "#c4a000", "#3465a4", "#75507b", "#06989a", "#d3d7cf" },
-	brights = { "#555753", "#ef2929", "#8ae234", "#fce94f", "#729fcf", "#ad7fa8", "#34e2e2", "#eeeeec" },
+	ansi = { "#1d2021", "#ea6962", "#a9b665", "#d8a657", "#7daea3", "#d3869b", "#89b482", "#d4be98" },
+	brights = { "#eddeb5", "#ea6962", "#a9b665", "#d8a657", "#7daea3", "#d3869b", "#89b482", "#d4be98" },
 
 	tab_bar = {
 		background = bg,
 		active_tab = {
 			bg_color = bg,
-			fg_color = "#eeeeec",
+			fg_color = "#d4be98",
 			italic = true,
 		},
 		inactive_tab = {
 			bg_color = bg,
-			fg_color = "#555753",
+			fg_color = "#7c6f64",
 			italic = true,
 		},
 		new_tab = {
 			bg_color = bg,
-			fg_color = "#eeeeec",
+			fg_color = "#d4be98",
 			italic = true,
 		},
 	},

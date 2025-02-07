@@ -75,6 +75,16 @@ config.keys = {
 			mode = "SwapWithActive",
 		}),
 	},
+	{
+		key = "{",
+		mods = "SHIFT|ALT",
+		action = act.MoveTabRelative(-1),
+	},
+	{
+		key = "}",
+		mods = "SHIFT|ALT",
+		action = act.MoveTabRelative(1),
+	},
 }
 
 -- and finally, return the configuration to wezterm

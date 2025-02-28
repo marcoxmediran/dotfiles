@@ -54,6 +54,7 @@ config.window_frame = {
   font_size = default_font_size,
 
   active_titlebar_bg = bg,
+  inactive_titlebar_bg = bg,
 }
 
 -- Window

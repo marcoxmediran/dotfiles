@@ -40,7 +40,7 @@ config.window_frame = {
 -- Window
 config.initial_cols = 128
 config.initial_rows = 32
-config.window_padding = { left = 12, right = 12, top = 32, bottom = 4 }
+config.window_padding = { left = 12, right = 12, top = 4, bottom = 4 }
 config.window_close_confirmation = "NeverPrompt"
 
 -- and finally, return the configuration to wezterm

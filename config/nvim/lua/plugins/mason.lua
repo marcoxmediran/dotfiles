@@ -41,6 +41,18 @@ return {
       lspconfig.bashls.setup({
         capabilities = capabilities,
       })
+      lspconfig.html.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.cssls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.ts_ls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.phpactor.setup({
+        capabilities = capabilities,
+      })
     end,
   },
   {
@@ -57,6 +69,8 @@ return {
           null_ls.builtins.formatting.black,
           null_ls.builtins.formatting.asmfmt,
           null_ls.builtins.formatting.shfmt,
+          null_ls.builtins.formatting.prettier,
+          null_ls.builtins.formatting.phpcbf,
           require("none-ls.diagnostics.cpplint"),
         },
       }) -- Binds

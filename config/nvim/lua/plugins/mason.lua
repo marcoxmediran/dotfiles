@@ -50,7 +50,7 @@ return {
       lspconfig.ts_ls.setup({
         capabilities = capabilities,
       })
-      lspconfig.phpactor.setup({
+      lspconfig.intelephense.setup({
         capabilities = capabilities,
       })
     end,
@@ -70,11 +70,14 @@ return {
           null_ls.builtins.formatting.asmfmt,
           null_ls.builtins.formatting.shfmt,
           null_ls.builtins.formatting.prettier,
-          null_ls.builtins.formatting.phpcbf,
+          null_ls.builtins.formatting.pint,
+          null_ls.builtins.formatting.blade_formatter,
           require("none-ls.diagnostics.cpplint"),
         },
       }) -- Binds
-      vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+      vim.keymap.set("n", "<leader>gf", function()
+        vim.lsp.buf.format({ timeout_ms = 2000 })
+      end, {})
     end,
   },
 }

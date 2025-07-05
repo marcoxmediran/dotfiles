@@ -35,22 +35,7 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
-      lspconfig.asm_lsp.setup({
-        capabilities = capabilities,
-      })
       lspconfig.bashls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.html.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.cssls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.ts_ls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.intelephense.setup({
         capabilities = capabilities,
       })
     end,
@@ -66,17 +51,13 @@ return {
         sources = {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.clang_format,
-          null_ls.builtins.formatting.black,
-          null_ls.builtins.formatting.asmfmt,
           null_ls.builtins.formatting.shfmt,
           null_ls.builtins.formatting.prettier,
-          null_ls.builtins.formatting.pint,
-          null_ls.builtins.formatting.blade_formatter,
           require("none-ls.diagnostics.cpplint"),
         },
       }) -- Binds
       vim.keymap.set("n", "<leader>gf", function()
-        vim.lsp.buf.format({ timeout_ms = 2000 })
+        vim.lsp.buf.format({ timeout_ms = 5000 })
       end, {})
     end,
   },

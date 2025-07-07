@@ -1,29 +1,40 @@
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason-lspconfig.nvim",
     opts = {},
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    opts = {
-      auto_install = true,
+    dependencies = {
+      { "mason-org/mason.nvim", opts = {} },
+      "neovim/nvim-lspconfig",
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
-  },
-  {
-    "neovim/nvim-lspconfig",
-    lazy = false,
     config = function()
+      local mason = require("mason")
+      local mason_lspconfig = require("mason-lspconfig")
+      local mason_tool_installer = require("mason-tool-installer")
+
+      mason.setup({})
+      mason_lspconfig.setup({})
+      mason_tool_installer.setup({
+        ensure_installed = {
+          "bash-language-server",
+          "clang-format",
+          "clangd",
+          "cpplint",
+          "intelephense",
+          "jdtls",
+          "lua-language-server",
+          "prettier",
+          "python-lsp-server",
+          "shfmt",
+          "stylua",
+        },
+      })
+
       -- Binds
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-      -- Initialize LSP's
-      vim.lsp.enable("pylsp")
-      vim.lsp.enable("clangd")
-      vim.lsp.enable("jdtls")
-      vim.lsp.enable("lua_ls")
-      vim.lsp.enable("bashls")
     end,
   },
   {

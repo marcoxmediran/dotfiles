@@ -1,9 +1,7 @@
 return {
   {
     "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup()
-    end,
+    opts = {},
   },
   {
     "williamboman/mason-lspconfig.nvim",
@@ -21,23 +19,11 @@ return {
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
       -- Initialize LSP's
-      local lspconfig = require("lspconfig")
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      lspconfig.pylsp.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.clangd.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.jdtls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.bashls.setup({
-        capabilities = capabilities,
-      })
+      vim.lsp.enable("pylsp")
+      vim.lsp.enable("clangd")
+      vim.lsp.enable("jdtls")
+      vim.lsp.enable("lua_ls")
+      vim.lsp.enable("bashls")
     end,
   },
   {

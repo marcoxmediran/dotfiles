@@ -1,4 +1,5 @@
 return {
   "OXY2DEV/markview.nvim",
-  lazy = false,      -- Recommended
+  lazy = false,
+  priority = 49,
 }

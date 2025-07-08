@@ -23,6 +23,7 @@ return {
           "intelephense",
           "jdtls",
           "lua-language-server",
+          "marksman",
           "prettier",
           "python-lsp-server",
           "shfmt",

@@ -16,16 +16,49 @@ return {
         table.insert(file_paths, item.value)
       end
 
-      require("telescope.pickers")
-          .new({}, {
-            prompt_title = "Harpoon",
-            finder = require("telescope.finders").new_table({
-              results = file_paths,
-            }),
-            previewer = conf.file_previewer({}),
-            sorter = conf.generic_sorter({}),
-          })
-          :find()
+      local pickers = require("telescope.pickers")
+      local finders = require("telescope.finders")
+      local actions = require("telescope.actions")
+      local action_state = require("telescope.actions.state")
+
+      pickers
+        .new({}, {
+          prompt_title = "Harpoon",
+          finder = finders.new_table({
+            results = file_paths,
+          }),
+          previewer = conf.file_previewer({}),
+          sorter = conf.generic_sorter({}),
+          attach_mappings = function(prompt_bufnr, map)
+            local function delete_entry()
+              local selection = action_state.get_selected_entry()
+              if not selection then
+                return
+              end
+
+              -- Find index and remove from harpoon list
+              for i, item in ipairs(harpoon_files.items) do
+                if item.value == selection[1] then
+                  harpoon_files:remove_at(i)
+                  break
+                end
+              end
+
+              actions.close(prompt_bufnr)
+
+              -- Reopen the picker to reflect changes
+              vim.schedule(function()
+                toggle_telescope(harpoon:list())
+              end)
+            end
+
+            map("i", "<C-d>", delete_entry)
+            map("n", "dd", delete_entry)
+
+            return true
+          end,
+        })
+        :find()
     end
 
     -- Binds

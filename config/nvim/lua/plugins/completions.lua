@@ -9,6 +9,9 @@ return {
       local cmp = require("cmp")
       require("luasnip.loaders.from_vscode").lazy_load()
 
+      -- Add html5 snippets for blade files
+      require("luasnip").filetype_extend("blade", {"html"})
+
       cmp.setup({
         snippet = {
           expand = function(args)

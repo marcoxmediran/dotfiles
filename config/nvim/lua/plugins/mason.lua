@@ -31,6 +31,8 @@ return {
           "shfmt",
           "stylua",
           "tailwindcss-language-server",
+          "typescript-language-server",
+          "vue-language-server",
         },
       })
 

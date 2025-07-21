@@ -27,7 +27,7 @@ return {
           "marksman",
           "pint",
           "prettier",
-          "python-lsp-server",
+          "pyright",
           "shfmt",
           "stylua",
           "tailwindcss-language-server",

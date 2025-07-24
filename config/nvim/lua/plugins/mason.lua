@@ -28,6 +28,7 @@ return {
           "pint",
           "prettier",
           "pyright",
+          "ruff",
           "shfmt",
           "stylua",
           "tailwindcss-language-server",
@@ -59,6 +60,7 @@ return {
           null_ls.builtins.formatting.shfmt,
           null_ls.builtins.formatting.stylua,
           require("none-ls.diagnostics.cpplint"),
+          require("none-ls.diagnostics.ruff"),
         },
       }) -- Binds
       vim.keymap.set("n", "<leader>gf", function()

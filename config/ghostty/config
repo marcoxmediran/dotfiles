@@ -1,7 +1,7 @@
 # font
-font-family = "JetBrainsMono Nerd Font Mono"
-font-size = 18
-font-thicken = true
+font-family = "JetBrainsMono Nerd Font"
+font-size = 9
+font-feature = -calt, -liga, -dlig
 
 # theme
 palette = 0=#32302f
@@ -20,27 +20,20 @@ palette = 12=#7daea3
 palette = 13=#d3869b
 palette = 14=#89b482
 palette = 15=#d4be98
-background = #1d2021
-foreground = #d4be98
+background = 1d2021
+foreground = d4be98
 
+# cursor
 selection-invert-fg-bg = true
 cursor-invert-fg-bg = true
-
-background-opacity = 0.80
-background-blur-radius = 64
-
 cursor-style = block
 cursor-style-blink = true
 
 # window
 title = "Terminal"
-window-padding-x = 16
-window-padding-y = 16
+window-padding-x = 8
+window-padding-y = 8
 window-vsync = true
-# hacky way to start as maximized by setting width and height
-# to a very large number to clamp window to screen size
-window-height = 1000
-window-width = 1000
 
 # behavior
 confirm-close-surface = false

@@ -34,6 +34,7 @@ title = "Terminal"
 window-padding-x = 8
 window-padding-y = 8
 window-vsync = true
+gtk-titlebar-hide-when-maximized = true
 
 # behavior
 confirm-close-surface = false

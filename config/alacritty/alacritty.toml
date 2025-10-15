@@ -30,9 +30,6 @@ size = 9.0
 family = "JetBrainsMono Nerd Font"
 style = "Medium"
 
-[window]
-opacity = 0.8
-
 [window.padding]
 x = 16
 y = 8

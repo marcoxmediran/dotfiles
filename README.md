@@ -5,7 +5,7 @@
   - Fedora Linux
   - macOS Sequoia (Opencore)
 - **Terminal:**
-  - Wezterm
+  - Wezterm/Alacritty/Ghostty
 - **Shell:**
   - Bash
 

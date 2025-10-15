@@ -1,67 +1,34 @@
-# Default colors
 [colors.primary]
-background = '#f0edec'
-foreground = '#4e4e4e'
-
-# Normal colors
+background = '#1d2021'
+foreground = '#d4be98'
 [colors.normal]
-black   = '#24292e'
-red     = '#d73a49'
-green   = '#28a745'
-yellow  = '#dbab09'
-blue    = '#0366d6'
-magenta = '#5a32a3'
-cyan    = '#0598bc'
-white   = '#6a737d'
-
-# Bright colors
+black = '#32302f'
+red = '#ea6962'
+green = '#a9b665'
+yellow = '#d8a657'
+blue = '#7daea3'
+magenta = '#d3869b'
+cyan = '#89b482'
+white = '#d4be98'
 [colors.bright]
-black   = '#959da5'
-red     = '#cb2431'
-green   = '#22863a'
-yellow  = '#b08800'
-blue    = '#005cc5'
-magenta = '#5a32a3'
-cyan    = '#3192aa'
-white   = '#d1d5da'
-
-[[colors.indexed_colors]]
-index = 16
-color = '#d18616'
-
-[[colors.indexed_colors]]
-index = 17
-color = '#cb2431'
+black = '#32302f'
+red = '#ea6962'
+green = '#a9b665'
+yellow = '#d8a657'
+blue = '#7daea3'
+magenta = '#d3869b'
+cyan = '#89b482'
+white = '#d4be98'
 
 [env]
 TERM = "xterm-256color"
 
-[terminal]
-[terminal.shell]
-program = "/usr/bin/bash"
-args = ["-l", "-c", "tmux a || tmux"]
-
 [font]
-size = 12.0
-
-[font.bold]
-family = "JetBrainsMono Nerd Font"
-style = "Bold"
-
-[font.bold_italic]
-family = "JetBrainsMono Nerd Font"
-style = "Bold Italic"
-
-[font.italic]
-family = "JetBrainsMono Nerd Font"
-style = "Italic"
+size = 9.0
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 style = "Medium"
-
-[window]
-startup_mode = "Maximized"
 
 [window.padding]
 x = 16

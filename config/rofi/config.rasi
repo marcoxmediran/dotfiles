@@ -1,0 +1,15 @@
+configuration {
+  modes: [ combi ];
+  combi-modes: [ window, drun, run ];
+
+  display-combi: "Search";
+
+  font: "JetBrainsMono Nerd Font 10";
+}
+
+@theme "gruvbox-dark"
+
+window {
+  border: 0px;
+  width: 512;
+}

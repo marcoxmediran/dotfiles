@@ -2,7 +2,7 @@
 
 - **OS:**
   - Windows 11
-  - Fedora Linux
+  - Gentoo Linux
   - macOS Sequoia (Opencore)
 - **Terminal:**
   - Wezterm/Alacritty/Ghostty

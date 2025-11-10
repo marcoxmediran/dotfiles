@@ -7,9 +7,10 @@ configuration {
   font: "JetBrainsMono Nerd Font 10";
 }
 
-@theme "gruvbox-dark"
+@theme "paper-float"
 
 window {
   border: 0px;
   width: 512;
+  y-offset: -30%;
 }

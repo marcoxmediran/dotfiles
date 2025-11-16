@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrainsMono Nerd Font Bold 8
+font pango:JetBrainsMono Nerd Font Medium 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -30,6 +30,7 @@ exec --no-startup-id /usr/libexec/xdg-desktop-portal-gtk -r
 exec --no-startup-id /usr/libexec/xdg-desktop-portal-gnome -r
 exec --no-startup-id /usr/libexec/flatpak-portal -r
 exec --no-startup-id "sh -c 'sleep 5; exec /usr/libexec/xdg-desktop-portal -r'"
+exec --no-startup-id /usr/local/bin/monitor_only
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -136,28 +137,26 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Border
-default_border normal 1
+default_border normal 0
 hide_edge_borders smart
 
 # Window Rules
 for_window [all] floating enable
 for_window [class="Alacritty"] floating disable
 for_window [class="firefox" window_role="browser"] floating disable
+for_window [class="tf_linux64"] floating disable
 
 # Custom Colors
-#set $bg   #262626
-#set $fg   #D4BE98
-#set $grey #888888
 set $bg   #c0c0c0
 set $fg   #000000
 set $ac   #000080
 # Class                   border  backgr  text  indicator child_border
 client.background         $bg
-client.focused            $bg     $bg     $fg   $bg     $bg     
-client.focused_inactive   $bg     $bg     $grey $bg     $bg     
-client.unfocused          $bg     $bg     $grey $bg     $bg     
-client.urgent             $bg     $bg     $grey $bg     $bg     
-client.placeholder        $bg     $bg     $grey $bg     $bg     
+client.focused            $bg     $ac     $bg   $bg     $bg     
+client.focused_inactive   $bg     $bg     $fg   $bg     $bg     
+client.unfocused          $bg     $bg     $fg   $bg     $bg     
+client.urgent             $bg     $bg     $fg   $bg     $bg     
+client.placeholder        $bg     $bg     $fg   $bg     $bg     
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -190,7 +189,7 @@ bindsym $mod+Down exec --no-startup-id "light -U 2"
 bindsym $mod+8 exec --no-startup-id "playerctl previous"
 bindsym $mod+9 exec --no-startup-id "playerctl play-pause"
 bindsym $mod+0 exec --no-startup-id "playerctl next"
-bindsym $mod+p exec --no-startup-id "maim ~/Pictures/Screenshots/$(date +'%F_%T').png"
-bindsym $mod+o exec --no-startup-id "maim -s ~/Pictures/Screenshots/$(date +'%F_%T').png"
-bindsym $mod+Shift+p exec --no-startup-id "maim | xclip -sel clipboard -t image/png"
-bindsym $mod+Shift+o exec --no-startup-id "maim -s | xclip -sel clipboard -t image/png"
+bindsym $mod+p exec --no-startup-id "screenshot_desktop"
+bindsym $mod+o exec --no-startup-id "screenshot_selection"
+bindsym $mod+Shift+p exec --no-startup-id "screenshot_desktop_to_clipboard"
+bindsym $mod+Shift+o exec --no-startup-id "screenshot_selection_to_clipboard"

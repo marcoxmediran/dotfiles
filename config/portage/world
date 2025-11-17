@@ -12,6 +12,8 @@ app-misc/keyd
 app-misc/neofetch
 app-misc/tmux
 dev-libs/light
+dev-util/android-tools
+gnome-base/gvfs
 gnome-extra/nm-applet
 lxde-base/lxappearance
 media-fonts/noto
@@ -35,6 +37,7 @@ net-misc/yt-dlp
 net-print/cups-meta
 net-print/epson-inkjet-printer-escpr
 sys-apps/flatpak
+sys-apps/ripgrep
 sys-apps/xdg-desktop-portal
 sys-apps/xdg-desktop-portal-gnome
 sys-apps/xdg-desktop-portal-gtk
@@ -46,7 +49,9 @@ sys-fs/xfsprogs
 sys-kernel/gentoo-kernel-bin
 sys-kernel/installkernel
 sys-kernel/linux-firmware
+sys-power/tlp
 sys-process/htop
+virtual/jdk
 www-client/firefox-bin
 x11-apps/xrandr
 x11-base/xorg-drivers
@@ -54,6 +59,7 @@ x11-base/xorg-server
 x11-misc/arandr
 x11-misc/i3status
 x11-misc/picom
+x11-misc/redshift
 x11-misc/rofi
 x11-misc/xclip
 x11-misc/xdg-user-dirs
@@ -61,4 +67,5 @@ x11-terms/alacritty
 x11-terms/xterm
 x11-wm/i3
 xfce-base/thunar
+xfce-base/thunar-volman
 xfce-extra/thunar-archive-plugin

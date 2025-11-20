@@ -17,15 +17,12 @@ return {
       mason_tool_installer.setup({
         ensure_installed = {
           "bash-language-server",
-          "blade-formatter",
           "clang-format",
           "clangd",
           "cpplint",
-          "intelephense",
           "jdtls",
           "lua-language-server",
           "marksman",
-          "pint",
           "prettier",
           "pyright",
           "ruff",

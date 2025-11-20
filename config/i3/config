@@ -25,12 +25,13 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Autostart commands
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/teal/008080_desktop.jpg
+exec --no-startup-id xsetroot -solid "#121212"
 exec --no-startup-id /usr/libexec/xdg-desktop-portal-gtk -r
 exec --no-startup-id /usr/libexec/xdg-desktop-portal-gnome -r
 exec --no-startup-id /usr/libexec/flatpak-portal -r
 exec --no-startup-id "sh -c 'sleep 5; exec /usr/libexec/xdg-desktop-portal -r'"
 exec --no-startup-id /usr/local/bin/monitor_only
+exec --no-startup-id redshift
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -145,18 +146,19 @@ for_window [all] floating enable
 for_window [class="Alacritty"] floating disable
 for_window [class="firefox" window_role="browser"] floating disable
 for_window [class="tf_linux64"] floating disable
+for_window [class="obsidian"] floating disable
 
 # Custom Colors
-set $bg   #c0c0c0
-set $fg   #000000
-set $ac   #000080
+set $bg   #000000
+set $fg   #ffffff
+set $ac   #008080
 # Class                   border  backgr  text  indicator child_border
 client.background         $bg
-client.focused            $bg     $ac     $bg   $bg     $bg     
-client.focused_inactive   $bg     $bg     $fg   $bg     $bg     
-client.unfocused          $bg     $bg     $fg   $bg     $bg     
-client.urgent             $bg     $bg     $fg   $bg     $bg     
-client.placeholder        $bg     $bg     $fg   $bg     $bg     
+client.focused            $bg     $ac     $bg   $bg       $ac     
+client.focused_inactive   $bg     $bg     $fg   $bg       $bg     
+client.unfocused          $bg     $bg     $fg   $bg       $bg     
+client.urgent             $bg     $bg     $fg   $bg       $bg     
+client.placeholder        $bg     $bg     $fg   $bg       $bg     
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

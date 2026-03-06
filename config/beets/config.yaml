@@ -1,0 +1,32 @@
+directory: ~/Music
+library: ~/.config/beets/musiclibrary.db
+
+import:
+  move: yes
+paths:
+  default: $albumartist/$album ($year)/$track. $title
+  singleton: Non-Album/$artist/$title
+
+plugins: musicbrainz discogs deezer spotify fromfilename embedart fetchart lyrics inline convert web missing
+musicbrainz:
+  data_source_mismatch_penalty: 0.3
+discogs:
+  data_source_mismatch_penalty: 0.3
+deezer:
+  data_source_mismatch_penalty: 0.3
+spotify:
+  data_source_mismatch_penalty: 0.3
+lyrics:
+  auto: yes
+  translate:
+      api_key:
+      from_languages: []
+      to_language:
+  dist_thresh: 0.11
+  fallback: null
+  force: no
+  google_API_key: null
+  google_engine_ID: 009217259823014548361:lndtuqkycfu
+  print: no
+  sources: [lrclib, google, genius]
+  synced: yes

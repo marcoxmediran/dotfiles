@@ -1,6 +1,7 @@
 # font
-font-family = "JetBrainsMono Nerd Font"
-font-size = 9
+font-family = "Google Sans Code"
+font-style = "Medium"
+font-size = 13
 font-feature = -calt, -liga, -dlig
 
 # theme

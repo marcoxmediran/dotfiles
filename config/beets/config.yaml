@@ -30,3 +30,5 @@ lyrics:
   print: no
   sources: [lrclib, google, genius]
   synced: yes
+embedart:
+  remove_art_file: true

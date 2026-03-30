@@ -31,4 +31,5 @@ lyrics:
   sources: [lrclib, google, genius]
   synced: yes
 embedart:
+  maxwidth: 1500
   remove_art_file: true

@@ -16,6 +16,7 @@ return {
       mason_lspconfig.setup({})
       mason_tool_installer.setup({
         ensure_installed = {
+          "basedpyright",
           "bash-language-server",
           "clang-format",
           "clangd",
@@ -54,7 +55,6 @@ return {
           null_ls.builtins.formatting.shfmt,
           null_ls.builtins.formatting.stylua,
           require("none-ls.diagnostics.cpplint"),
-          require("none-ls.diagnostics.ruff"),
         },
       }) -- Binds
       vim.keymap.set("n", "<leader>gf", function()

@@ -166,5 +166,13 @@ plugin_cmp.setup({
 
 -- Treesitter
 local plugin_treesitter = require("nvim-treesitter")
-plugin_treesitter.setup({})
-plugin_treesitter.install({ "dart", "java", "lua", "c", "cpp" }):wait(300000)
+local languages = { "dart", "java", "lua", "c", "cpp", "markdown", "markdown_inline", "html", "latex", "typst" }
+
+plugin_treesitter.install(languages)
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = languages,
+	callback = function()
+		vim.treesitter.start()
+	end,
+})
